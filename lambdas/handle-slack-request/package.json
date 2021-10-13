@@ -1,6 +1,6 @@
 {
   "name": "handle-slack-request",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Deals with the request from slack app",
   "main": "index.js",
   "scripts": {

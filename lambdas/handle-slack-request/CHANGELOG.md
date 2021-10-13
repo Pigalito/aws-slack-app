@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.2 (2021-10-13)
+
+
+### Bug Fixes
+
+* **terraform:** Remove cyclic dependency ([c6b2f29](https://github.com/Pigalito/aws-slack-app/commit/c6b2f298bdfdee3038da084e8335cdca9d77d131))
+
+
+
+
+
 ## 0.2.1 (2021-10-13)
 
 
