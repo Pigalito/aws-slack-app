@@ -43,7 +43,3 @@ jobs:
       - name: Lerna version
         run: |
           npx lerna version --create-release github --yes
-
-      - run: cat lerna-debug.log
-        if: always()
-        
