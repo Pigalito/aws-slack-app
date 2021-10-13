@@ -1,0 +1,14 @@
+{
+  "name": "handle-slack-request",
+  "version": "0.1.0",
+  "description": "Deals with the request from slack app",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest *"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "27.2.5"
+  }
+}

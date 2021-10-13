@@ -1,0 +1,24 @@
+{
+  "name": "aws-slack-app",
+  "version": "1.0.0",
+  "description": "Terraform and Lambda set up for creating a slack app",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest *",
+    "bootstrap": "lerna bootstrap"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pigalito/aws-slack-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pigalito/aws-slack-app/issues"
+  },
+  "homepage": "https://github.com/Pigalito/aws-slack-app#readme",
+  "dependencies": {
+    "jest": "27.2.5",
+    "lerna": "^4.0.0"
+  }
+}
