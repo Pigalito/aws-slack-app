@@ -42,5 +42,5 @@ jobs:
 
       - name: Lerna version
         run: |
-          npx lerna version --create-release github --yes
+          npx lerna version --create-release github --yes && cat lerna-debug.log
         
