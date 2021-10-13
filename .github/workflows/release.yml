@@ -45,4 +45,5 @@ jobs:
           npx lerna version --create-release github --yes
 
       - run: cat lerna-debug.log
+        if: always()
         
