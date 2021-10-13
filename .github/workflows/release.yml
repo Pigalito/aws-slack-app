@@ -39,7 +39,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
-      - name: Lerna publish release
+      - name: Lerna version
         run: |
-          npx lerna publish --create-release github --yes
+          npx lerna version --create-release github --yes
         
