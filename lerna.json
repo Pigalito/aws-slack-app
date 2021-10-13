@@ -3,5 +3,5 @@
     "lambdas/*"
   ],
   "version": "independent",
-  "message": "chore(release): [PFMT-0000] publish new version [skip ci]"
+  "message": "[skip ci]"
 }

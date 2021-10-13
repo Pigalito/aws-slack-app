@@ -1,0 +1,43 @@
+name: Deploy Artifacts to S3
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-2
+
+      - name: Get the function name
+        id: get_function
+        run: echo ::set-output name=FUNCTION_NAME::$(echo $GITHUB_REF | cut -d / -f 3 | cut -d @ -f 1)
+
+      - name: Get the version
+        id: get_version
+        run: echo ::set-output name=SEM_VERSION::$(echo $GITHUB_REF | cut -d / -f 3 | cut -d @ -f 2)
+
+      - name: ⚙️ Run Lerna Bootstrap
+        run: |
+          npm run bootstrap --include-dependents --include-dependencies --scope=${{ steps.get_function.outputs.FUNCTION_NAME }}
+
+      - name: 🎁 Package
+        run: |
+          export SERVICE=${{ steps.get_function.outputs.FUNCTION_NAME }}
+          export PACKAGE_NAME=${{ steps.get_function.outputs.FUNCTION_NAME }}-${{ steps.get_version.outputs.SEM_VERSION }}.zip
+          cd ./lambdas/$SERVICE && zip -r ../../$PACKAGE_NAME ./
+        shell: bash
+
+      - name: 💫 Send to S3
+        run: |
+          export PACKAGE_NAME=${{ steps.get_function.outputs.FUNCTION_NAME }}-${{ steps.get_version.outputs.SEM_VERSION }}.zip
+          aws s3 cp $PACKAGE_NAME  s3://${{ env.S3_DEPLOYMENT_BUCKET }}/
+        shell: bash
