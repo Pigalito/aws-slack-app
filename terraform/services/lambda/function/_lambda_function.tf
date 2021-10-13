@@ -31,7 +31,7 @@ resource "aws_cloudwatch_log_group" "lambda_log_group" {
 }
 
 resource "aws_lambda_event_source_mapping" "sqs" {
-  count            = "${var.include_sqs == true ? 1 : 0}"
+  count            = var.include_sqs == true ? 1 : 0
   event_source_arn = var.sqs_queue_arn
   function_name    = aws_lambda_function.lambda.arn
   batch_size       = var.sqs_batch_size
