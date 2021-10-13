@@ -31,7 +31,15 @@ jobs:
       - name: Run tests
         run: npm test
 
-      - name: Lerna bump version
+      - name: Configure CI Git User
         run: |
-          npx lerna version --create-release github --yes
+          git remote set-url origin https://${GH_TOKEN}@github.com/aws-slack-app.git
+          git config --global user.email auto@email.com
+          git config --global user.name auto-release
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      - name: Lerna publish release
+        run: |
+          npx lerna publish --create-release github --yes
         
