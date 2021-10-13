@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.3 (2021-10-13)
+
+
+### Bug Fixes
+
+* **build:** commit package-lock.json changes ([c04c52f](https://github.com/Pigalito/aws-slack-app/commit/c04c52f2d3b31bfb7b5c30338ad69057eb5c42e6))
+
+
+
+
+
 ## 0.1.2 (2021-10-13)
 
 
