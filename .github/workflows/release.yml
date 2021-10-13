@@ -33,5 +33,5 @@ jobs:
 
       - name: Lerna bump version
         run: |
-          npx lerna version --create-release github --yes
+          npx lerna version -y --conventional-commit --create-release github
         
