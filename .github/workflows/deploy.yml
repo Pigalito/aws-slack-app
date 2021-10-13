@@ -4,6 +4,9 @@ on:
   release:
     types: [published]
 
+env:
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
 jobs:
   deploy:
     runs-on: ubuntu-latest

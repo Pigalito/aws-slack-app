@@ -6,6 +6,9 @@ on:
     branches:
       - master
 
+env:
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
 jobs:
   prepare:
     runs-on: ubuntu-latest
@@ -36,8 +39,6 @@ jobs:
           git remote set-url origin https://${GH_TOKEN}@github.com/Pigalito/aws-slack-app.git
           git config --global user.email auto@email.com
           git config --global user.name auto-release
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Lerna version
         run: |
