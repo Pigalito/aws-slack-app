@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.1 (2021-10-13)
+
+
+### Bug Fixes
+
+* **apigateway:** Update api gateway logging and deployment dependencies ([a5864e1](https://github.com/Pigalito/aws-slack-app/commit/a5864e16caf91120523a3bece6cc8d577f981ebf))
+
+
+
+
+
 # 0.2.0 (2021-10-13)
 
 
