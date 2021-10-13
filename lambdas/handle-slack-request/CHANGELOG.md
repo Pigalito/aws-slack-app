@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2021-10-13)
+
+
+### Features
+
+* **API:** Add API gateway and one method for invoking lambda. Run terraform format too. ([669e964](https://github.com/Pigalito/aws-slack-app/commit/669e9641fc7eeaf697055c9434c2a38a83d362c8))
+
+
+
+
+
 ## 0.1.4 (2021-10-13)
 
 **Note:** Version bump only for package handle-slack-request
