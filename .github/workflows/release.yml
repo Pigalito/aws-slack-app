@@ -33,7 +33,7 @@ jobs:
 
       - name: Configure CI Git User
         run: |
-          git remote set-url origin https://${GH_TOKEN}@github.com/aws-slack-app.git
+          git remote set-url origin https://${GH_TOKEN}@github.com/Pigalito/aws-slack-app.git
           git config --global user.email auto@email.com
           git config --global user.name auto-release
         env:
