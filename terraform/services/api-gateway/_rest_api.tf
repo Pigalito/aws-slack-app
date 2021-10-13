@@ -29,7 +29,7 @@ resource "aws_api_gateway_stage" "staging" {
 }
 
 resource "aws_cloudwatch_log_group" "slack_commands" {
-  name              = "API-Gateway-Execution-Logs_${aws_api_gateway_rest_api.slack_commands.id}/${aws_api_gateway_stage.staging.stage_name}"
+  name              = "API-Gateway-Execution-Logs_${aws_api_gateway_rest_api.slack_commands.id}/staging"
   retention_in_days = 7
 }
 
