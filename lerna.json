@@ -3,5 +3,6 @@
     "lambdas/*"
   ],
   "version": "independent",
+  "conventionalCommits": true,
   "message": "[skip ci]"
 }
