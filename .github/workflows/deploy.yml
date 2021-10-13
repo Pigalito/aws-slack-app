@@ -42,5 +42,5 @@ jobs:
       - name: 💫 Send to S3
         run: |
           export PACKAGE_NAME=${{ steps.get_function.outputs.FUNCTION_NAME }}-${{ steps.get_version.outputs.SEM_VERSION }}.zip
-          aws s3 cp $PACKAGE_NAME  s3://${{ secrets.S3_DEPLOYMENT_BUCKET }}/
+          aws s3 cp $PACKAGE_NAME  s3://${{ secrets.S3_DEPLOYMENT_BUCKET }}/lambdas/
         shell: bash
